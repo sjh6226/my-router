@@ -9,7 +9,7 @@ import {
 import Root, { loader as rootLoader, action as rootAction, } from "./routes/root"; // 루트 컴포넌트
 import ErrorPage from "./error-page"; // 에러 페이지
 import Contact, { loader as contactLoader, }  from "./routes/contact";
-import EditContact from "./routes/edit";
+import EditContact, { action as editAction, } from "./routes/edit";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +28,7 @@ const router = createBrowserRouter([
         path: "contacts/:contactId/edit",
         element: <EditContact />,
         loader: contactLoader,
+        action: editAction,
       },
     ],
   },
