@@ -1,4 +1,4 @@
-import { Form, useLoaderData, Form, useFetcher } from "react-router-dom";
+import { Form, useLoaderData, useFetcher } from "react-router-dom";
 import { getContact, updateContact } from "../contacts";
 
 export async function action({ request, params }) {
